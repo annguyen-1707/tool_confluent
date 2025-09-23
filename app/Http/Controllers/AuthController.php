@@ -1,21 +1,45 @@
 <?php
 
+namespace App\Http\Controllers;
+
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Http\Request;
 
 class AuthController extends Controller
 {
-    public function login()
-    {
-        $credentials = request(['username', 'password']);
 
-        if (! $token = Auth::attempt($credentials)) {
-            return response()->json(['error' => 'Unauthorized'], 401);
+    public function login(Request $request)
+    {
+        $credentials = $request->only('username', 'password');
+
+        // Tìm user trong DB
+        $user = \App\Models\User::where('username', $credentials['username'])->first();
+
+        if (! $user) {
+            Log::warning('Login failed: User not found', ['username' => $credentials['username']]);
+            return response()->json(['error' => 'Unauthorized - user not found'], 401);
         }
 
+        // Kiểm tra password hash
+        if (! Hash::check($credentials['password'], $user->password)) {
+            Log::warning('Login failed: Wrong password', [11111
+                'username' => $credentials['username'],
+                'input_password' => $credentials['password']
+            ]);
+            return response()->json(['error' => 'Unauthorized - wrong password'], 401);
+        }
+
+        if (! $token = auth()->attempt($credentials)) {
+            Log::error('Login failed: Auth::attempt() returned false', $credentials);
+            return response()->json(['error' => 'Unauthorized - auth failed'], 401);
+        }
+
+        Log::info('Login success', ['username' => $credentials['username']]);
         return $this->respondWithToken($token);
     }
-
     public function me()
     {
         return response()->json(Auth::user());
@@ -34,10 +58,16 @@ class AuthController extends Controller
 
     protected function respondWithToken($token)
     {
+        Log::alert('Login success', [
+            'userId' => Auth::id(),
+            'username' => Auth::user()->username ?? null
+        ]);
+
         return response()->json([
             'access_token' => $token,
-            'token_type' => 'bearer',
-            'expires_in' => Auth::factory()->getTTL() * 60
+            'expires_in'   => Auth::factory()->getTTL() * 60,
+             'userId' => Auth::id(),
+             'role' => Auth::user()->role ?? null
         ]);
     }
 }
