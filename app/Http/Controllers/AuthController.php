@@ -25,7 +25,7 @@ class AuthController extends Controller
 
         // Kiểm tra password hash
         if (! Hash::check($credentials['password'], $user->password)) {
-            Log::warning('Login failed: Wrong password', [11111
+            Log::warning('Login failed: Wrong password', [
                 'username' => $credentials['username'],
                 'input_password' => $credentials['password']
             ]);
@@ -66,8 +66,9 @@ class AuthController extends Controller
         return response()->json([
             'access_token' => $token,
             'expires_in'   => Auth::factory()->getTTL() * 60,
-             'userId' => Auth::id(),
-             'role' => Auth::user()->role ?? null
+            'userId' => Auth::id(),
+            'username' => Auth::user()->username ?? null,
+            'role' => Auth::user()->role ?? null
         ]);
     }
 }

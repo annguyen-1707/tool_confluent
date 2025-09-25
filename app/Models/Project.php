@@ -11,12 +11,15 @@ class Project extends Model
 
     // Các trường có thể gán hàng loạt
     protected $fillable = [
-        'name',
-        'description',
+        'title',
         'start_date',
         'end_date',
         'members',
-        'attachments',
+        'description',
+        'status',
+        'created_by',
+        'created_at',
+        'updated_at'
     ];
 
     // Nếu bạn muốn dùng timestamps mặc định (created_at, updated_at)
@@ -27,7 +30,6 @@ class Project extends Model
         'start_date'   => 'datetime',
         'end_date'     => 'datetime',
         'members'      => 'array',
-        'attachments'  => 'array',
         'created_at'   => 'datetime',
         'updated_at'   => 'datetime',
     ];
