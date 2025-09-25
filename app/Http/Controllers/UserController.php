@@ -23,7 +23,7 @@ class UserController extends Controller
     public function show($id)
     {
         $user = $this->service->getById($id);
-        if (!$user) return response()->json(['error' => 'Not found'], 404);
+        if (!$user) return response()->json(['error' => 'Not found user'], 404);
         return response()->json($user);
     }
 
@@ -36,14 +36,14 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         $user = $this->service->update($id, $request->all());
-        if (!$user) return response()->json(['error' => 'Not found'], 404);
+        if (!$user) return response()->json(['error' => 'Not found user'], 404);
         return response()->json($user);
     }
 
     public function destroy($id)
     {
         $deleted = $this->service->delete($id);
-        if (!$deleted) return response()->json(['error' => 'Not found'], 404);
+        if (!$deleted) return response()->json(['error' => 'Not found user'], 404);
         return response()->json(['message' => 'Deleted']);
     }
 }

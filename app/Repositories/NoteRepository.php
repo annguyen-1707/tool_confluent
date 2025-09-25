@@ -2,33 +2,33 @@
 
 namespace App\Repositories;
 
-use App\Models\Log;
+use App\Models\Note;
 
-class LogRepository
+class NoteRepository
 {
     public function all()
     {
-        return Log::all();
+        return Note::all();
     }
 
     public function find($id)
     {
-        return Log::find($id);
+        return Note::find($id);
     }
 
     public function create(array $data)
     {
-        return Log::create($data);
+        return Note::create($data);
     }
 
-    public function update(Log $log, array $data)
+    public function update(Note $note, array $data)
     {
-        $log->update($data);
-        return $log;
+        $note->update($data);
+        return $note;
     }
 
-    public function delete(Log $log)
+    public function delete(Note $note)
     {
-        return $log->delete();
+        return $note->delete();
     }
 }

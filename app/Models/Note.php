@@ -12,12 +12,12 @@ class Note extends Model
   // Các trường có thể gán hàng loạt
     protected $fillable = [
         'title',
-        'file_url',
         'project_id',
         'description',
         'created_by',
         'created_at',
-        'updated_at'
+        'updated_at',
+        'status'
     ];
 
     // Nếu bạn muốn dùng timestamps mặc định (created_at, updated_at)
