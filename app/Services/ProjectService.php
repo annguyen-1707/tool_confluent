@@ -2,10 +2,12 @@
 
 namespace App\Services;
 
+use App\Enums\Status;
 use App\Repositories\LogRepository;
 use App\Repositories\ProjectRepository;
 use App\Repositories\UserRepository;
 use Error;
+use Illuminate\Support\Facades\Auth;
 
 class ProjectService
 {
@@ -32,11 +34,13 @@ class ProjectService
 
     public function create(array $data)
     {
+        $data['created_by'] = Auth::id();
+        $data['status'] = Status::Public->value;
         $project =  $this->repo->create($data);
         // Ghi log
         $this->repoLog->create([
             'title'       => 'Tạo dự án mới',
-            'project_id'  => $project->_id,
+            'project_id'  => $project->id,
             'type'        => 'project',
             'action'      => 'create',
             'old_value'   => null,
@@ -45,6 +49,7 @@ class ProjectService
             'created_at'  => now(),
             'updated_at'  => now(),
         ]);
+        return $project;
     }
 
     public function addMembersInProject(array $userIds, $projectId)
@@ -93,7 +98,17 @@ class ProjectService
     {
         $project = $this->repo->find($id);
         if (!$project) return null;
-
+        $this->repoLog->create([
+            'title'       => 'Cập nhật dự án',
+            'project_id'  => $project->id,
+            'type'        => 'project',
+            'action'      => 'update',
+            'old_value'   => json_encode($project),
+            'new_value'   => json_encode($data),
+            'created_by'  => $data['created_by'] ?? null,
+            'created_at'  => now(),
+            'updated_at'  => now(),
+        ]);
         return $this->repo->update($project, $data);
     }
 
@@ -103,5 +118,9 @@ class ProjectService
         if (!$project) return false;
 
         return $this->repo->delete($project);
+    }
+
+    public function deleteSoft($id) {
+        
     }
 }

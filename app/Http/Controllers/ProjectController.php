@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Enums\ProjectStatus;
+use App\Enums\Status;
 use App\Services\ProjectService;
 use Illuminate\Routing\Controller;
 use Illuminate\Http\Request;
@@ -37,7 +37,7 @@ class ProjectController extends Controller
         //     'start_date'  => 'nullable|date',
         //     'end_date'    => 'nullable|date|after_or_equal:start_date',
         //     'description' => 'nullable|string',
-        //     'status'      => ['required', new Enum(ProjectStatus::class)],
+        //     'status'      => ['required', new Enum(Status::class)],
         //     'created_by'  => 'required|string',
         // ]);
         $project = $this->service->create($request->all());

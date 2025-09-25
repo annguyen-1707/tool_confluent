@@ -104,7 +104,7 @@
             "authors": [
                 {
                     "name": "KyleKatarn",
-                    "username": "kylekatarnls@gmail.com"
+                    "email": "kylekatarnls@gmail.com"
                 }
             ],
             "description": "Types to use Carbon in Doctrine",
@@ -177,22 +177,22 @@
             "authors": [
                 {
                     "name": "Dragonfly Development Inc.",
-                    "username": "info@dflydev.com",
+                    "email": "info@dflydev.com",
                     "homepage": "http://dflydev.com"
                 },
                 {
                     "name": "Beau Simensen",
-                    "username": "beau@dflydev.com",
+                    "email": "beau@dflydev.com",
                     "homepage": "http://beausimensen.com"
                 },
                 {
                     "name": "Carlos Frutos",
-                    "username": "carlos@kiwing.it",
+                    "email": "carlos@kiwing.it",
                     "homepage": "https://github.com/cfrutos"
                 },
                 {
                     "name": "Colin O'Dell",
-                    "username": "colinodell@gmail.com",
+                    "email": "colinodell@gmail.com",
                     "homepage": "https://www.colinodell.com"
                 }
             ],
@@ -247,23 +247,23 @@
             "authors": [
                 {
                     "name": "Guilherme Blanco",
-                    "username": "guilhermeblanco@gmail.com"
+                    "email": "guilhermeblanco@gmail.com"
                 },
                 {
                     "name": "Roman Borschel",
-                    "username": "roman@code-factory.org"
+                    "email": "roman@code-factory.org"
                 },
                 {
                     "name": "Benjamin Eberlei",
-                    "username": "kontakt@beberlei.de"
+                    "email": "kontakt@beberlei.de"
                 },
                 {
                     "name": "Jonathan Wage",
-                    "username": "jonwage@gmail.com"
+                    "email": "jonwage@gmail.com"
                 },
                 {
                     "name": "Johannes Schmitt",
-                    "username": "schmittjoh@gmail.com"
+                    "email": "schmittjoh@gmail.com"
                 }
             ],
             "description": "PHP Doctrine Inflector is a small library that can perform string manipulations with regard to upper/lowercase and singular/plural forms of words.",
@@ -337,15 +337,15 @@
             "authors": [
                 {
                     "name": "Guilherme Blanco",
-                    "username": "guilhermeblanco@gmail.com"
+                    "email": "guilhermeblanco@gmail.com"
                 },
                 {
                     "name": "Roman Borschel",
-                    "username": "roman@code-factory.org"
+                    "email": "roman@code-factory.org"
                 },
                 {
                     "name": "Johannes Schmitt",
-                    "username": "schmittjoh@gmail.com"
+                    "email": "schmittjoh@gmail.com"
                 }
             ],
             "description": "PHP Doctrine Lexer parser library that can be used in Top-Down, Recursive Descent Parsers.",
@@ -421,7 +421,7 @@
             "authors": [
                 {
                     "name": "Chris Tankersley",
-                    "username": "chris@ctankersley.com",
+                    "email": "chris@ctankersley.com",
                     "homepage": "https://github.com/dragonmantank"
                 }
             ],
@@ -443,16 +443,16 @@
             "time": "2024-10-09T13:47:03+00:00"
         },
         {
-            "name": "egulias/username-validator",
+            "name": "egulias/email-validator",
             "version": "4.0.4",
             "source": {
                 "type": "git",
-                "url": "https://github.com/egulias/usernameValidator.git",
+                "url": "https://github.com/egulias/EmailValidator.git",
                 "reference": "d42c8731f0624ad6bdc8d3e5e9a4524f68801cfa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egulias/usernameValidator/zipball/d42c8731f0624ad6bdc8d3e5e9a4524f68801cfa",
+                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/d42c8731f0624ad6bdc8d3e5e9a4524f68801cfa",
                 "reference": "d42c8731f0624ad6bdc8d3e5e9a4524f68801cfa",
                 "shasum": ""
             },
@@ -476,7 +476,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Egulias\\usernameValidator\\": "src"
+                    "Egulias\\EmailValidator\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -488,18 +488,18 @@
                     "name": "Eduardo Gulias Davis"
                 }
             ],
-            "description": "A library for validating usernames against several RFCs",
-            "homepage": "https://github.com/egulias/usernameValidator",
+            "description": "A library for validating emails against several RFCs",
+            "homepage": "https://github.com/egulias/EmailValidator",
             "keywords": [
-                "username",
-                "usernamevalidation",
-                "usernamevalidator",
+                "email",
+                "emailvalidation",
+                "emailvalidator",
                 "validation",
                 "validator"
             ],
             "support": {
-                "issues": "https://github.com/egulias/usernameValidator/issues",
-                "source": "https://github.com/egulias/usernameValidator/tree/4.0.4"
+                "issues": "https://github.com/egulias/EmailValidator/issues",
+                "source": "https://github.com/egulias/EmailValidator/tree/4.0.4"
             },
             "funding": [
                 {
@@ -554,7 +554,7 @@
                 },
                 {
                     "name": "Barryvdh",
-                    "username": "barryvdh@gmail.com"
+                    "email": "barryvdh@gmail.com"
                 }
             ],
             "description": "Cross-origin resource sharing library for the Symfony HttpFoundation",
@@ -614,7 +614,7 @@
             "authors": [
                 {
                     "name": "Graham Campbell",
-                    "username": "hello@gjcampbell.co.uk",
+                    "email": "hello@gjcampbell.co.uk",
                     "homepage": "https://github.com/GrahamCampbell"
                 }
             ],
@@ -702,37 +702,37 @@
             "authors": [
                 {
                     "name": "Graham Campbell",
-                    "username": "hello@gjcampbell.co.uk",
+                    "email": "hello@gjcampbell.co.uk",
                     "homepage": "https://github.com/GrahamCampbell"
                 },
                 {
                     "name": "Michael Dowling",
-                    "username": "mtdowling@gmail.com",
+                    "email": "mtdowling@gmail.com",
                     "homepage": "https://github.com/mtdowling"
                 },
                 {
                     "name": "Jeremy Lindblom",
-                    "username": "jeremeamia@gmail.com",
+                    "email": "jeremeamia@gmail.com",
                     "homepage": "https://github.com/jeremeamia"
                 },
                 {
                     "name": "George Mponos",
-                    "username": "gmponos@gmail.com",
+                    "email": "gmponos@gmail.com",
                     "homepage": "https://github.com/gmponos"
                 },
                 {
                     "name": "Tobias Nyholm",
-                    "username": "tobias.nyholm@gmail.com",
+                    "email": "tobias.nyholm@gmail.com",
                     "homepage": "https://github.com/Nyholm"
                 },
                 {
                     "name": "Márk Sági-Kazár",
-                    "username": "mark.sagikazar@gmail.com",
+                    "email": "mark.sagikazar@gmail.com",
                     "homepage": "https://github.com/sagikazarmark"
                 },
                 {
                     "name": "Tobias Schultze",
-                    "username": "webmaster@tubo-world.de",
+                    "email": "webmaster@tubo-world.de",
                     "homepage": "https://github.com/Tobion"
                 }
             ],
@@ -808,22 +808,22 @@
             "authors": [
                 {
                     "name": "Graham Campbell",
-                    "username": "hello@gjcampbell.co.uk",
+                    "email": "hello@gjcampbell.co.uk",
                     "homepage": "https://github.com/GrahamCampbell"
                 },
                 {
                     "name": "Michael Dowling",
-                    "username": "mtdowling@gmail.com",
+                    "email": "mtdowling@gmail.com",
                     "homepage": "https://github.com/mtdowling"
                 },
                 {
                     "name": "Tobias Nyholm",
-                    "username": "tobias.nyholm@gmail.com",
+                    "email": "tobias.nyholm@gmail.com",
                     "homepage": "https://github.com/Nyholm"
                 },
                 {
                     "name": "Tobias Schultze",
-                    "username": "webmaster@tubo-world.de",
+                    "email": "webmaster@tubo-world.de",
                     "homepage": "https://github.com/Tobion"
                 }
             ],
@@ -902,37 +902,37 @@
             "authors": [
                 {
                     "name": "Graham Campbell",
-                    "username": "hello@gjcampbell.co.uk",
+                    "email": "hello@gjcampbell.co.uk",
                     "homepage": "https://github.com/GrahamCampbell"
                 },
                 {
                     "name": "Michael Dowling",
-                    "username": "mtdowling@gmail.com",
+                    "email": "mtdowling@gmail.com",
                     "homepage": "https://github.com/mtdowling"
                 },
                 {
                     "name": "George Mponos",
-                    "username": "gmponos@gmail.com",
+                    "email": "gmponos@gmail.com",
                     "homepage": "https://github.com/gmponos"
                 },
                 {
                     "name": "Tobias Nyholm",
-                    "username": "tobias.nyholm@gmail.com",
+                    "email": "tobias.nyholm@gmail.com",
                     "homepage": "https://github.com/Nyholm"
                 },
                 {
                     "name": "Márk Sági-Kazár",
-                    "username": "mark.sagikazar@gmail.com",
+                    "email": "mark.sagikazar@gmail.com",
                     "homepage": "https://github.com/sagikazarmark"
                 },
                 {
                     "name": "Tobias Schultze",
-                    "username": "webmaster@tubo-world.de",
+                    "email": "webmaster@tubo-world.de",
                     "homepage": "https://github.com/Tobion"
                 },
                 {
                     "name": "Márk Sági-Kazár",
-                    "username": "mark.sagikazar@gmail.com",
+                    "email": "mark.sagikazar@gmail.com",
                     "homepage": "https://sagikazarmark.hu"
                 }
             ],
@@ -1009,22 +1009,22 @@
             "authors": [
                 {
                     "name": "Graham Campbell",
-                    "username": "hello@gjcampbell.co.uk",
+                    "email": "hello@gjcampbell.co.uk",
                     "homepage": "https://github.com/GrahamCampbell"
                 },
                 {
                     "name": "Michael Dowling",
-                    "username": "mtdowling@gmail.com",
+                    "email": "mtdowling@gmail.com",
                     "homepage": "https://github.com/mtdowling"
                 },
                 {
                     "name": "George Mponos",
-                    "username": "gmponos@gmail.com",
+                    "email": "gmponos@gmail.com",
                     "homepage": "https://github.com/gmponos"
                 },
                 {
                     "name": "Tobias Nyholm",
-                    "username": "tobias.nyholm@gmail.com",
+                    "email": "tobias.nyholm@gmail.com",
                     "homepage": "https://github.com/Nyholm"
                 }
             ],
@@ -1055,16 +1055,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v12.30.1",
+            "version": "v12.31.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "7f61e8679f9142f282a0184ac7ef9e3834bfd023"
+                "reference": "281b711710c245dd8275d73132e92635be3094df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/7f61e8679f9142f282a0184ac7ef9e3834bfd023",
-                "reference": "7f61e8679f9142f282a0184ac7ef9e3834bfd023",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/281b711710c245dd8275d73132e92635be3094df",
+                "reference": "281b711710c245dd8275d73132e92635be3094df",
                 "shasum": ""
             },
             "require": {
@@ -1072,7 +1072,7 @@
                 "composer-runtime-api": "^2.2",
                 "doctrine/inflector": "^2.0.5",
                 "dragonmantank/cron-expression": "^3.4",
-                "egulias/username-validator": "^3.2.1|^4.0",
+                "egulias/email-validator": "^3.2.1|^4.0",
                 "ext-ctype": "*",
                 "ext-filter": "*",
                 "ext-hash": "*",
@@ -1258,7 +1258,7 @@
             "authors": [
                 {
                     "name": "Taylor Otwell",
-                    "username": "taylor@laravel.com"
+                    "email": "taylor@laravel.com"
                 }
             ],
             "description": "The Laravel Framework.",
@@ -1271,20 +1271,20 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2025-09-18T21:07:07+00:00"
+            "time": "2025-09-23T15:33:04+00:00"
         },
         {
             "name": "laravel/prompts",
-            "version": "v0.3.6",
+            "version": "v0.3.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/prompts.git",
-                "reference": "86a8b692e8661d0fb308cec64f3d176821323077"
+                "reference": "a1891d362714bc40c8d23b0b1d7090f022ea27cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/prompts/zipball/86a8b692e8661d0fb308cec64f3d176821323077",
-                "reference": "86a8b692e8661d0fb308cec64f3d176821323077",
+                "url": "https://api.github.com/repos/laravel/prompts/zipball/a1891d362714bc40c8d23b0b1d7090f022ea27cc",
+                "reference": "a1891d362714bc40c8d23b0b1d7090f022ea27cc",
                 "shasum": ""
             },
             "require": {
@@ -1301,8 +1301,8 @@
                 "illuminate/collections": "^10.0|^11.0|^12.0",
                 "mockery/mockery": "^1.5",
                 "pestphp/pest": "^2.3|^3.4",
-                "phpstan/phpstan": "^1.11",
-                "phpstan/phpstan-mockery": "^1.1"
+                "phpstan/phpstan": "^1.12.28",
+                "phpstan/phpstan-mockery": "^1.1.3"
             },
             "suggest": {
                 "ext-pcntl": "Required for the spinner to be animated."
@@ -1328,22 +1328,22 @@
             "description": "Add beautiful and user-friendly forms to your command-line applications.",
             "support": {
                 "issues": "https://github.com/laravel/prompts/issues",
-                "source": "https://github.com/laravel/prompts/tree/v0.3.6"
+                "source": "https://github.com/laravel/prompts/tree/v0.3.7"
             },
-            "time": "2025-07-07T14:17:42+00:00"
+            "time": "2025-09-19T13:47:56+00:00"
         },
         {
             "name": "laravel/serializable-closure",
-            "version": "v2.0.4",
+            "version": "v2.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/serializable-closure.git",
-                "reference": "b352cf0534aa1ae6b4d825d1e762e35d43f8a841"
+                "reference": "3832547db6e0e2f8bb03d4093857b378c66eceed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/serializable-closure/zipball/b352cf0534aa1ae6b4d825d1e762e35d43f8a841",
-                "reference": "b352cf0534aa1ae6b4d825d1e762e35d43f8a841",
+                "url": "https://api.github.com/repos/laravel/serializable-closure/zipball/3832547db6e0e2f8bb03d4093857b378c66eceed",
+                "reference": "3832547db6e0e2f8bb03d4093857b378c66eceed",
                 "shasum": ""
             },
             "require": {
@@ -1374,11 +1374,11 @@
             "authors": [
                 {
                     "name": "Taylor Otwell",
-                    "username": "taylor@laravel.com"
+                    "email": "taylor@laravel.com"
                 },
                 {
                     "name": "Nuno Maduro",
-                    "username": "nuno@laravel.com"
+                    "email": "nuno@laravel.com"
                 }
             ],
             "description": "Laravel Serializable Closure provides an easy and secure way to serialize closures in PHP.",
@@ -1391,7 +1391,7 @@
                 "issues": "https://github.com/laravel/serializable-closure/issues",
                 "source": "https://github.com/laravel/serializable-closure"
             },
-            "time": "2025-03-19T13:51:03+00:00"
+            "time": "2025-09-22T17:29:40+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -1443,7 +1443,7 @@
             "authors": [
                 {
                     "name": "Taylor Otwell",
-                    "username": "taylor@laravel.com"
+                    "email": "taylor@laravel.com"
                 }
             ],
             "description": "Powerful REPL for the Laravel framework.",
@@ -1503,7 +1503,7 @@
             "authors": [
                 {
                     "name": "Luís Cobucci",
-                    "username": "lcobucci@gmail.com"
+                    "email": "lcobucci@gmail.com"
                 }
             ],
             "description": "Yet another clock abstraction",
@@ -1572,7 +1572,7 @@
             "authors": [
                 {
                     "name": "Luís Cobucci",
-                    "username": "lcobucci@gmail.com",
+                    "email": "lcobucci@gmail.com",
                     "role": "Developer"
                 }
             ],
@@ -1660,7 +1660,7 @@
             "authors": [
                 {
                     "name": "Colin O'Dell",
-                    "username": "colinodell@gmail.com",
+                    "email": "colinodell@gmail.com",
                     "homepage": "https://www.colinodell.com",
                     "role": "Lead Developer"
                 }
@@ -1748,7 +1748,7 @@
             "authors": [
                 {
                     "name": "Colin O'Dell",
-                    "username": "colinodell@gmail.com",
+                    "email": "colinodell@gmail.com",
                     "homepage": "https://www.colinodell.com",
                     "role": "Lead Developer"
                 }
@@ -1846,7 +1846,7 @@
             "authors": [
                 {
                     "name": "Frank de Jonge",
-                    "username": "info@frankdejonge.nl"
+                    "email": "info@frankdejonge.nl"
                 }
             ],
             "description": "File storage abstraction for PHP",
@@ -1902,7 +1902,7 @@
             "authors": [
                 {
                     "name": "Frank de Jonge",
-                    "username": "info@frankdejonge.nl"
+                    "email": "info@frankdejonge.nl"
                 }
             ],
             "description": "Local filesystem adapter for Flysystem.",
@@ -1954,7 +1954,7 @@
             "authors": [
                 {
                     "name": "Frank de Jonge",
-                    "username": "info@frankdejonge.nl"
+                    "email": "info@frankdejonge.nl"
                 }
             ],
             "description": "Mime-type detection for Flysystem",
@@ -2023,7 +2023,7 @@
             "authors": [
                 {
                     "name": "Ignace Nyamagana Butera",
-                    "username": "nyamsprod@gmail.com",
+                    "email": "nyamsprod@gmail.com",
                     "homepage": "https://nyamsprod.com"
                 }
             ],
@@ -2109,7 +2109,7 @@
             "authors": [
                 {
                     "name": "Ignace Nyamagana Butera",
-                    "username": "nyamsprod@gmail.com",
+                    "email": "nyamsprod@gmail.com",
                     "homepage": "https://nyamsprod.com"
                 }
             ],
@@ -2216,22 +2216,22 @@
             "authors": [
                 {
                     "name": "Andreas Braun",
-                    "username": "andreas.braun@mongodb.com",
+                    "email": "andreas.braun@mongodb.com",
                     "role": "Leader"
                 },
                 {
                     "name": "Pauline Vos",
-                    "username": "pauline.vos@mongodb.com",
+                    "email": "pauline.vos@mongodb.com",
                     "role": "Maintainer"
                 },
                 {
                     "name": "Jérôme Tamarelle",
-                    "username": "jerome.tamarelle@mongodb.com",
+                    "email": "jerome.tamarelle@mongodb.com",
                     "role": "Maintainer"
                 },
                 {
                     "name": "Jeremy Mikola",
-                    "username": "jmikola@gmail.com",
+                    "email": "jmikola@gmail.com",
                     "role": "Maintainer"
                 },
                 {
@@ -2309,15 +2309,15 @@
             "authors": [
                 {
                     "name": "Andreas Braun",
-                    "username": "andreas.braun@mongodb.com"
+                    "email": "andreas.braun@mongodb.com"
                 },
                 {
                     "name": "Jeremy Mikola",
-                    "username": "jmikola@gmail.com"
+                    "email": "jmikola@gmail.com"
                 },
                 {
                     "name": "Jérôme Tamarelle",
-                    "username": "jerome.tamarelle@mongodb.com"
+                    "email": "jerome.tamarelle@mongodb.com"
                 }
             ],
             "description": "MongoDB driver library",
@@ -2410,7 +2410,7 @@
             "authors": [
                 {
                     "name": "Jordi Boggiano",
-                    "username": "j.boggiano@seld.be",
+                    "email": "j.boggiano@seld.be",
                     "homepage": "https://seld.be"
                 }
             ],
@@ -2506,7 +2506,7 @@
             "authors": [
                 {
                     "name": "Brian Nesbitt",
-                    "username": "brian@nesbot.com",
+                    "email": "brian@nesbot.com",
                     "homepage": "https://markido.com"
                 },
                 {
@@ -2806,7 +2806,7 @@
             "authors": [
                 {
                     "name": "Nuno Maduro",
-                    "username": "enunomaduro@gmail.com"
+                    "email": "enunomaduro@gmail.com"
                 }
             ],
             "description": "Its like Tailwind CSS, but for the console.",
@@ -2840,16 +2840,16 @@
         },
         {
             "name": "phiki/phiki",
-            "version": "v2.0.3",
+            "version": "v2.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phikiphp/phiki.git",
-                "reference": "fe51fe6dc31856cd776fd1b04ee74053a4271644"
+                "reference": "160785c50c01077780ab217e5808f00ab8f05a13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phikiphp/phiki/zipball/fe51fe6dc31856cd776fd1b04ee74053a4271644",
-                "reference": "fe51fe6dc31856cd776fd1b04ee74053a4271644",
+                "url": "https://api.github.com/repos/phikiphp/phiki/zipball/160785c50c01077780ab217e5808f00ab8f05a13",
+                "reference": "160785c50c01077780ab217e5808f00ab8f05a13",
                 "shasum": ""
             },
             "require": {
@@ -2887,7 +2887,7 @@
             "authors": [
                 {
                     "name": "Ryan Chandler",
-                    "username": "support@ryangjchandler.co.uk",
+                    "email": "support@ryangjchandler.co.uk",
                     "homepage": "https://ryangjchandler.co.uk",
                     "role": "Developer"
                 }
@@ -2895,7 +2895,7 @@
             "description": "Syntax highlighting using TextMate grammars in PHP.",
             "support": {
                 "issues": "https://github.com/phikiphp/phiki/issues",
-                "source": "https://github.com/phikiphp/phiki/tree/v2.0.3"
+                "source": "https://github.com/phikiphp/phiki/tree/v2.0.4"
             },
             "funding": [
                 {
@@ -2907,7 +2907,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2025-09-19T11:50:41+00:00"
+            "time": "2025-09-20T17:21:02+00:00"
         },
         {
             "name": "phpoption/phpoption",
@@ -2952,12 +2952,12 @@
             "authors": [
                 {
                     "name": "Johannes M. Schmitt",
-                    "username": "schmittjoh@gmail.com",
+                    "email": "schmittjoh@gmail.com",
                     "homepage": "https://github.com/schmittjoh"
                 },
                 {
                     "name": "Graham Campbell",
-                    "username": "hello@gjcampbell.co.uk",
+                    "email": "hello@gjcampbell.co.uk",
                     "homepage": "https://github.com/GrahamCampbell"
                 }
             ],
@@ -3457,7 +3457,7 @@
             "authors": [
                 {
                     "name": "Justin Hileman",
-                    "username": "justin@justinhileman.info"
+                    "email": "justin@justinhileman.info"
                 }
             ],
             "description": "An interactive shell for modern PHP.",
@@ -3508,7 +3508,7 @@
             "authors": [
                 {
                     "name": "Ralph Khattar",
-                    "username": "ralph.khattar@gmail.com"
+                    "email": "ralph.khattar@gmail.com"
                 }
             ],
             "description": "A polyfill for getallheaders.",
@@ -3575,7 +3575,7 @@
             "authors": [
                 {
                     "name": "Ben Ramsey",
-                    "username": "ben@benramsey.com",
+                    "email": "ben@benramsey.com",
                     "homepage": "https://benramsey.com"
                 }
             ],
@@ -3713,7 +3713,7 @@
             "authors": [
                 {
                     "name": "Nicolas Grekas",
-                    "username": "p@tchwork.com"
+                    "email": "p@tchwork.com"
                 },
                 {
                     "name": "Symfony Community",
@@ -3806,7 +3806,7 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "username": "fabien@symfony.com"
+                    "email": "fabien@symfony.com"
                 },
                 {
                     "name": "Symfony Community",
@@ -3877,11 +3877,11 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "username": "fabien@symfony.com"
+                    "email": "fabien@symfony.com"
                 },
                 {
                     "name": "Jean-François Simon",
-                    "username": "jeanfrancois.simon@sensiolabs.com"
+                    "email": "jeanfrancois.simon@sensiolabs.com"
                 },
                 {
                     "name": "Symfony Community",
@@ -3948,7 +3948,7 @@
             "authors": [
                 {
                     "name": "Nicolas Grekas",
-                    "username": "p@tchwork.com"
+                    "email": "p@tchwork.com"
                 },
                 {
                     "name": "Symfony Community",
@@ -4025,7 +4025,7 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "username": "fabien@symfony.com"
+                    "email": "fabien@symfony.com"
                 },
                 {
                     "name": "Symfony Community",
@@ -4109,7 +4109,7 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "username": "fabien@symfony.com"
+                    "email": "fabien@symfony.com"
                 },
                 {
                     "name": "Symfony Community",
@@ -4181,7 +4181,7 @@
             "authors": [
                 {
                     "name": "Nicolas Grekas",
-                    "username": "p@tchwork.com"
+                    "email": "p@tchwork.com"
                 },
                 {
                     "name": "Symfony Community",
@@ -4253,7 +4253,7 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "username": "fabien@symfony.com"
+                    "email": "fabien@symfony.com"
                 },
                 {
                     "name": "Symfony Community",
@@ -4336,7 +4336,7 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "username": "fabien@symfony.com"
+                    "email": "fabien@symfony.com"
                 },
                 {
                     "name": "Symfony Community",
@@ -4454,7 +4454,7 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "username": "fabien@symfony.com"
+                    "email": "fabien@symfony.com"
                 },
                 {
                     "name": "Symfony Community",
@@ -4501,7 +4501,7 @@
                 "shasum": ""
             },
             "require": {
-                "egulias/username-validator": "^2.1.10|^3|^4",
+                "egulias/email-validator": "^2.1.10|^3|^4",
                 "php": ">=8.2",
                 "psr/event-dispatcher": "^1",
                 "psr/log": "^1|^2|^3",
@@ -4538,14 +4538,14 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "username": "fabien@symfony.com"
+                    "email": "fabien@symfony.com"
                 },
                 {
                     "name": "Symfony Community",
                     "homepage": "https://symfony.com/contributors"
                 }
             ],
-            "description": "Helps sending usernames",
+            "description": "Helps sending emails",
             "homepage": "https://symfony.com",
             "support": {
                 "source": "https://github.com/symfony/mailer/tree/v7.3.3"
@@ -4590,14 +4590,14 @@
                 "symfony/polyfill-mbstring": "^1.0"
             },
             "conflict": {
-                "egulias/username-validator": "~3.0.0",
+                "egulias/email-validator": "~3.0.0",
                 "phpdocumentor/reflection-docblock": "<3.2.2",
                 "phpdocumentor/type-resolver": "<1.4.0",
                 "symfony/mailer": "<6.4",
                 "symfony/serializer": "<6.4.3|>7.0,<7.0.3"
             },
             "require-dev": {
-                "egulias/username-validator": "^2.1.10|^3.1|^4",
+                "egulias/email-validator": "^2.1.10|^3.1|^4",
                 "league/html-to-markdown": "^5.0",
                 "phpdocumentor/reflection-docblock": "^3.0|^4.0|^5.0",
                 "symfony/dependency-injection": "^6.4|^7.0",
@@ -4622,7 +4622,7 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "username": "fabien@symfony.com"
+                    "email": "fabien@symfony.com"
                 },
                 {
                     "name": "Symfony Community",
@@ -4703,7 +4703,7 @@
             "authors": [
                 {
                     "name": "Gert de Pagter",
-                    "username": "BackEndTea@gmail.com"
+                    "email": "BackEndTea@gmail.com"
                 },
                 {
                     "name": "Symfony Community",
@@ -4783,7 +4783,7 @@
             "authors": [
                 {
                     "name": "Nicolas Grekas",
-                    "username": "p@tchwork.com"
+                    "email": "p@tchwork.com"
                 },
                 {
                     "name": "Symfony Community",
@@ -4866,11 +4866,11 @@
             "authors": [
                 {
                     "name": "Laurent Bassin",
-                    "username": "laurent@bassin.info"
+                    "email": "laurent@bassin.info"
                 },
                 {
                     "name": "Trevor Rowbotham",
-                    "username": "trevor.rowbotham@pm.me"
+                    "email": "trevor.rowbotham@pm.me"
                 },
                 {
                     "name": "Symfony Community",
@@ -4955,7 +4955,7 @@
             "authors": [
                 {
                     "name": "Nicolas Grekas",
-                    "username": "p@tchwork.com"
+                    "email": "p@tchwork.com"
                 },
                 {
                     "name": "Symfony Community",
@@ -5041,7 +5041,7 @@
             "authors": [
                 {
                     "name": "Nicolas Grekas",
-                    "username": "p@tchwork.com"
+                    "email": "p@tchwork.com"
                 },
                 {
                     "name": "Symfony Community",
@@ -5122,11 +5122,11 @@
             "authors": [
                 {
                     "name": "Ion Bazan",
-                    "username": "ion.bazan@gmail.com"
+                    "email": "ion.bazan@gmail.com"
                 },
                 {
                     "name": "Nicolas Grekas",
-                    "username": "p@tchwork.com"
+                    "email": "p@tchwork.com"
                 },
                 {
                     "name": "Symfony Community",
@@ -5206,7 +5206,7 @@
             "authors": [
                 {
                     "name": "Nicolas Grekas",
-                    "username": "p@tchwork.com"
+                    "email": "p@tchwork.com"
                 },
                 {
                     "name": "Symfony Community",
@@ -5286,7 +5286,7 @@
             "authors": [
                 {
                     "name": "Nicolas Grekas",
-                    "username": "p@tchwork.com"
+                    "email": "p@tchwork.com"
                 },
                 {
                     "name": "Symfony Community",
@@ -5366,7 +5366,7 @@
             "authors": [
                 {
                     "name": "Nicolas Grekas",
-                    "username": "p@tchwork.com"
+                    "email": "p@tchwork.com"
                 },
                 {
                     "name": "Symfony Community",
@@ -5449,7 +5449,7 @@
             "authors": [
                 {
                     "name": "Grégoire Pineau",
-                    "username": "lyrixx@lyrixx.info"
+                    "email": "lyrixx@lyrixx.info"
                 },
                 {
                     "name": "Symfony Community",
@@ -5520,7 +5520,7 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "username": "fabien@symfony.com"
+                    "email": "fabien@symfony.com"
                 },
                 {
                     "name": "Symfony Community",
@@ -5599,7 +5599,7 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "username": "fabien@symfony.com"
+                    "email": "fabien@symfony.com"
                 },
                 {
                     "name": "Symfony Community",
@@ -5684,7 +5684,7 @@
             "authors": [
                 {
                     "name": "Nicolas Grekas",
-                    "username": "p@tchwork.com"
+                    "email": "p@tchwork.com"
                 },
                 {
                     "name": "Symfony Community",
@@ -5771,7 +5771,7 @@
             "authors": [
                 {
                     "name": "Nicolas Grekas",
-                    "username": "p@tchwork.com"
+                    "email": "p@tchwork.com"
                 },
                 {
                     "name": "Symfony Community",
@@ -5879,7 +5879,7 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "username": "fabien@symfony.com"
+                    "email": "fabien@symfony.com"
                 },
                 {
                     "name": "Symfony Community",
@@ -5953,7 +5953,7 @@
             "authors": [
                 {
                     "name": "Nicolas Grekas",
-                    "username": "p@tchwork.com"
+                    "email": "p@tchwork.com"
                 },
                 {
                     "name": "Symfony Community",
@@ -6026,11 +6026,11 @@
             "authors": [
                 {
                     "name": "Grégoire Pineau",
-                    "username": "lyrixx@lyrixx.info"
+                    "email": "lyrixx@lyrixx.info"
                 },
                 {
                     "name": "Nicolas Grekas",
-                    "username": "p@tchwork.com"
+                    "email": "p@tchwork.com"
                 },
                 {
                     "name": "Symfony Community",
@@ -6114,7 +6114,7 @@
             "authors": [
                 {
                     "name": "Nicolas Grekas",
-                    "username": "p@tchwork.com"
+                    "email": "p@tchwork.com"
                 },
                 {
                     "name": "Symfony Community",
@@ -6193,11 +6193,11 @@
             "authors": [
                 {
                     "name": "Tijs Verkoyen",
-                    "username": "css_to_inline_styles@verkoyen.eu",
+                    "email": "css_to_inline_styles@verkoyen.eu",
                     "role": "Developer"
                 }
             ],
-            "description": "CssToInlineStyles is a class that enables you to convert HTML-pages/files into HTML-pages/files with inline styles. This is very useful when you're sending usernames.",
+            "description": "CssToInlineStyles is a class that enables you to convert HTML-pages/files into HTML-pages/files with inline styles. This is very useful when you're sending emails.",
             "homepage": "https://github.com/tijsverkoyen/CssToInlineStyles",
             "support": {
                 "issues": "https://github.com/tijsverkoyen/CssToInlineStyles/issues",
@@ -6263,7 +6263,7 @@
             "authors": [
                 {
                     "name": "Sean Tymon",
-                    "username": "tymon148@gmail.com",
+                    "email": "tymon148@gmail.com",
                     "homepage": "https://tymon.xyz",
                     "role": "Developer"
                 }
@@ -6342,12 +6342,12 @@
             "authors": [
                 {
                     "name": "Graham Campbell",
-                    "username": "hello@gjcampbell.co.uk",
+                    "email": "hello@gjcampbell.co.uk",
                     "homepage": "https://github.com/GrahamCampbell"
                 },
                 {
                     "name": "Vance Lucas",
-                    "username": "vance@vancelucas.com",
+                    "email": "vance@vancelucas.com",
                     "homepage": "https://github.com/vlucas"
                 }
             ],
@@ -6490,7 +6490,7 @@
             "authors": [
                 {
                     "name": "Bernhard Schussek",
-                    "username": "bschussek@gmail.com"
+                    "email": "bschussek@gmail.com"
                 }
             ],
             "description": "Assertions to validate method input/output with nice error messages.",
@@ -6749,11 +6749,11 @@
             "authors": [
                 {
                     "name": "Taylor Otwell",
-                    "username": "taylor@laravel.com"
+                    "email": "taylor@laravel.com"
                 },
                 {
                     "name": "Nuno Maduro",
-                    "username": "enunomaduro@gmail.com"
+                    "email": "enunomaduro@gmail.com"
                 }
             ],
             "description": "Easily delve into your Laravel application's log files directly from the command line.",
@@ -6819,7 +6819,7 @@
             "authors": [
                 {
                     "name": "Nuno Maduro",
-                    "username": "enunomaduro@gmail.com"
+                    "email": "enunomaduro@gmail.com"
                 }
             ],
             "description": "An opinionated code formatter for PHP.",
@@ -6839,16 +6839,16 @@
         },
         {
             "name": "laravel/sail",
-            "version": "v1.45.0",
+            "version": "v1.46.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sail.git",
-                "reference": "019a2933ff4a9199f098d4259713f9bc266a874e"
+                "reference": "eb90c4f113c4a9637b8fdd16e24cfc64f2b0ae6e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/sail/zipball/019a2933ff4a9199f098d4259713f9bc266a874e",
-                "reference": "019a2933ff4a9199f098d4259713f9bc266a874e",
+                "url": "https://api.github.com/repos/laravel/sail/zipball/eb90c4f113c4a9637b8fdd16e24cfc64f2b0ae6e",
+                "reference": "eb90c4f113c4a9637b8fdd16e24cfc64f2b0ae6e",
                 "shasum": ""
             },
             "require": {
@@ -6886,7 +6886,7 @@
             "authors": [
                 {
                     "name": "Taylor Otwell",
-                    "username": "taylor@laravel.com"
+                    "email": "taylor@laravel.com"
                 }
             ],
             "description": "Docker files for running a basic Laravel application.",
@@ -6898,7 +6898,7 @@
                 "issues": "https://github.com/laravel/sail/issues",
                 "source": "https://github.com/laravel/sail"
             },
-            "time": "2025-08-25T19:28:31+00:00"
+            "time": "2025-09-23T13:44:39+00:00"
         },
         {
             "name": "mockery/mockery",
@@ -6943,19 +6943,19 @@
             "authors": [
                 {
                     "name": "Pádraic Brady",
-                    "username": "padraic.brady@gmail.com",
+                    "email": "padraic.brady@gmail.com",
                     "homepage": "https://github.com/padraic",
                     "role": "Author"
                 },
                 {
                     "name": "Dave Marshall",
-                    "username": "dave.marshall@atstsolutions.co.uk",
+                    "email": "dave.marshall@atstsolutions.co.uk",
                     "homepage": "https://davedevelopment.co.uk",
                     "role": "Developer"
                 },
                 {
                     "name": "Nathanael Esayeas",
-                    "username": "nathanael.esayeas@protonmail.com",
+                    "email": "nathanael.esayeas@protonmail.com",
                     "homepage": "https://github.com/ghostwriter",
                     "role": "Lead Developer"
                 }
@@ -7105,7 +7105,7 @@
             "authors": [
                 {
                     "name": "Nuno Maduro",
-                    "username": "enunomaduro@gmail.com"
+                    "email": "enunomaduro@gmail.com"
                 }
             ],
             "description": "Cli error handling for console/command-line PHP applications.",
@@ -7182,17 +7182,17 @@
             "authors": [
                 {
                     "name": "Arne Blankerts",
-                    "username": "arne@blankerts.de",
+                    "email": "arne@blankerts.de",
                     "role": "Developer"
                 },
                 {
                     "name": "Sebastian Heuer",
-                    "username": "sebastian@phpeople.de",
+                    "email": "sebastian@phpeople.de",
                     "role": "Developer"
                 },
                 {
                     "name": "Sebastian Bergmann",
-                    "username": "sebastian@phpunit.de",
+                    "email": "sebastian@phpunit.de",
                     "role": "Developer"
                 }
             ],
@@ -7239,17 +7239,17 @@
             "authors": [
                 {
                     "name": "Arne Blankerts",
-                    "username": "arne@blankerts.de",
+                    "email": "arne@blankerts.de",
                     "role": "Developer"
                 },
                 {
                     "name": "Sebastian Heuer",
-                    "username": "sebastian@phpeople.de",
+                    "email": "sebastian@phpeople.de",
                     "role": "Developer"
                 },
                 {
                     "name": "Sebastian Bergmann",
-                    "username": "sebastian@phpunit.de",
+                    "email": "sebastian@phpunit.de",
                     "role": "Developer"
                 }
             ],
@@ -7314,7 +7314,7 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "username": "sebastian@phpunit.de",
+                    "email": "sebastian@phpunit.de",
                     "role": "lead"
                 }
             ],
@@ -7388,7 +7388,7 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "username": "sebastian@phpunit.de",
+                    "email": "sebastian@phpunit.de",
                     "role": "lead"
                 }
             ],
@@ -7453,7 +7453,7 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "username": "sebastian@phpunit.de",
+                    "email": "sebastian@phpunit.de",
                     "role": "lead"
                 }
             ],
@@ -7513,7 +7513,7 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "username": "sebastian@phpunit.de",
+                    "email": "sebastian@phpunit.de",
                     "role": "lead"
                 }
             ],
@@ -7573,7 +7573,7 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "username": "sebastian@phpunit.de",
+                    "email": "sebastian@phpunit.de",
                     "role": "lead"
                 }
             ],
@@ -7597,16 +7597,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "11.5.39",
+            "version": "11.5.41",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "ad5597f79d8489d2870073ac0bc0dd0ad1fa9931"
+                "reference": "b42782bcb947d2c197aea42ce9714ee2d974b283"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/ad5597f79d8489d2870073ac0bc0dd0ad1fa9931",
-                "reference": "ad5597f79d8489d2870073ac0bc0dd0ad1fa9931",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/b42782bcb947d2c197aea42ce9714ee2d974b283",
+                "reference": "b42782bcb947d2c197aea42ce9714ee2d974b283",
                 "shasum": ""
             },
             "require": {
@@ -7630,7 +7630,7 @@
                 "sebastian/comparator": "^6.3.2",
                 "sebastian/diff": "^6.0.2",
                 "sebastian/environment": "^7.2.1",
-                "sebastian/exporter": "^6.3.0",
+                "sebastian/exporter": "^6.3.2",
                 "sebastian/global-state": "^7.0.2",
                 "sebastian/object-enumerator": "^6.0.1",
                 "sebastian/type": "^5.1.3",
@@ -7664,7 +7664,7 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "username": "sebastian@phpunit.de",
+                    "email": "sebastian@phpunit.de",
                     "role": "lead"
                 }
             ],
@@ -7678,7 +7678,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.39"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.41"
             },
             "funding": [
                 {
@@ -7702,7 +7702,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-09-14T06:20:41+00:00"
+            "time": "2025-09-24T06:32:10+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -7742,7 +7742,7 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "username": "sebastian@phpunit.de",
+                    "email": "sebastian@phpunit.de",
                     "role": "lead"
                 }
             ],
@@ -7799,7 +7799,7 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "username": "sebastian@phpunit.de",
+                    "email": "sebastian@phpunit.de",
                     "role": "lead"
                 }
             ],
@@ -7856,7 +7856,7 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "username": "sebastian@phpunit.de"
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "Looks up which function or method a line of code belongs to",
@@ -7919,19 +7919,19 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "username": "sebastian@phpunit.de"
+                    "email": "sebastian@phpunit.de"
                 },
                 {
                     "name": "Jeff Welch",
-                    "username": "whatthejeff@gmail.com"
+                    "email": "whatthejeff@gmail.com"
                 },
                 {
                     "name": "Volker Dusch",
-                    "username": "github@wallbash.com"
+                    "email": "github@wallbash.com"
                 },
                 {
                     "name": "Bernhard Schussek",
-                    "username": "bschussek@2bepublished.at"
+                    "email": "bschussek@2bepublished.at"
                 }
             ],
             "description": "Provides the functionality to compare PHP values for equality",
@@ -8005,7 +8005,7 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "username": "sebastian@phpunit.de",
+                    "email": "sebastian@phpunit.de",
                     "role": "lead"
                 }
             ],
@@ -8063,11 +8063,11 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "username": "sebastian@phpunit.de"
+                    "email": "sebastian@phpunit.de"
                 },
                 {
                     "name": "Kore Nordmann",
-                    "username": "mail@kore-nordmann.de"
+                    "email": "mail@kore-nordmann.de"
                 }
             ],
             "description": "Diff implementation",
@@ -8132,7 +8132,7 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "username": "sebastian@phpunit.de"
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "Provides functionality to handle HHVM/PHP environments",
@@ -8169,16 +8169,16 @@
         },
         {
             "name": "sebastian/exporter",
-            "version": "6.3.1",
+            "version": "6.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/exporter.git",
-                "reference": "8f67e53d3fcaf53105f95cc14f1630493d0fa2e6"
+                "reference": "70a298763b40b213ec087c51c739efcaa90bcd74"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/exporter/zipball/8f67e53d3fcaf53105f95cc14f1630493d0fa2e6",
-                "reference": "8f67e53d3fcaf53105f95cc14f1630493d0fa2e6",
+                "url": "https://api.github.com/repos/sebastianbergmann/exporter/zipball/70a298763b40b213ec087c51c739efcaa90bcd74",
+                "reference": "70a298763b40b213ec087c51c739efcaa90bcd74",
                 "shasum": ""
             },
             "require": {
@@ -8207,23 +8207,23 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "username": "sebastian@phpunit.de"
+                    "email": "sebastian@phpunit.de"
                 },
                 {
                     "name": "Jeff Welch",
-                    "username": "whatthejeff@gmail.com"
+                    "email": "whatthejeff@gmail.com"
                 },
                 {
                     "name": "Volker Dusch",
-                    "username": "github@wallbash.com"
+                    "email": "github@wallbash.com"
                 },
                 {
                     "name": "Adam Harvey",
-                    "username": "aharvey@php.net"
+                    "email": "aharvey@php.net"
                 },
                 {
                     "name": "Bernhard Schussek",
-                    "username": "bschussek@gmail.com"
+                    "email": "bschussek@gmail.com"
                 }
             ],
             "description": "Provides the functionality to export PHP variables for visualization",
@@ -8235,7 +8235,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/exporter/issues",
                 "security": "https://github.com/sebastianbergmann/exporter/security/policy",
-                "source": "https://github.com/sebastianbergmann/exporter/tree/6.3.1"
+                "source": "https://github.com/sebastianbergmann/exporter/tree/6.3.2"
             },
             "funding": [
                 {
@@ -8255,7 +8255,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-09-22T05:34:00+00:00"
+            "time": "2025-09-24T06:12:51+00:00"
         },
         {
             "name": "sebastian/global-state",
@@ -8298,7 +8298,7 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "username": "sebastian@phpunit.de"
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "Snapshotting of global state",
@@ -8358,7 +8358,7 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "username": "sebastian@phpunit.de",
+                    "email": "sebastian@phpunit.de",
                     "role": "lead"
                 }
             ],
@@ -8417,7 +8417,7 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "username": "sebastian@phpunit.de"
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "Traverses array structures and object graphs to enumerate all referenced objects",
@@ -8473,7 +8473,7 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "username": "sebastian@phpunit.de"
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "Allows reflection of object attributes, including inherited and non-public ones",
@@ -8529,15 +8529,15 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "username": "sebastian@phpunit.de"
+                    "email": "sebastian@phpunit.de"
                 },
                 {
                     "name": "Jeff Welch",
-                    "username": "whatthejeff@gmail.com"
+                    "email": "whatthejeff@gmail.com"
                 },
                 {
                     "name": "Adam Harvey",
-                    "username": "aharvey@php.net"
+                    "email": "aharvey@php.net"
                 }
             ],
             "description": "Provides functionality to recursively process PHP variables",
@@ -8605,7 +8605,7 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "username": "sebastian@phpunit.de",
+                    "email": "sebastian@phpunit.de",
                     "role": "lead"
                 }
             ],
@@ -8671,7 +8671,7 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "username": "sebastian@phpunit.de",
+                    "email": "sebastian@phpunit.de",
                     "role": "lead"
                 }
             ],
@@ -8786,7 +8786,7 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "username": "fabien@symfony.com"
+                    "email": "fabien@symfony.com"
                 },
                 {
                     "name": "Symfony Community",
@@ -8851,7 +8851,7 @@
             "authors": [
                 {
                     "name": "Arne Blankerts",
-                    "username": "arne@blankerts.de",
+                    "email": "arne@blankerts.de",
                     "role": "Developer"
                 }
             ],
