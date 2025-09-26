@@ -60,8 +60,9 @@ class ProjectController extends Controller
 
     public function addMembersInProject(Request $request, $projectId)
     {
+        Log::alert("request", $request->all());
         try {
-            $userIds = $this->service->addMembersInProject($request->all(), $projectId);
+            $userIds = $this->service->addMembersInProject($request->input('userIds'), $projectId);
             return response()->json($userIds);
         } catch (\Exception $e) {
             Log::error('Add members failed', [
@@ -74,10 +75,10 @@ class ProjectController extends Controller
     public function removeMemberInProject($projectId, $userId)
     {
         try {
-            $userId = $this->service->removeMemberInProject($userId, $projectId);
+            $userId = $this->service->removeMemberInProject($projectId, $userId);
             return response()->json($userId);
         } catch (\Exception $e) {
-            Log::error('Add members failed', [
+            Log::error('Remove members failed', [
                 'projectId' => $projectId,
                 'error' => $e->getMessage()
             ]);

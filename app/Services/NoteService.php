@@ -44,7 +44,7 @@ class NoteService
             'type' => 'Note',
             'action' => 'Create',
             'old_value' => null,
-            'new_value' => json_encode($data),
+            'new_value' => $data,
             'created_by' => Auth::id(),
             'target_id' => $note->id,
         ]);
