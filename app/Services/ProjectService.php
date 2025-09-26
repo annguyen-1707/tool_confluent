@@ -111,20 +111,21 @@ class ProjectService
 
     public function update($id, array $data)
     {
-        $project = $this->repo->find($id);
-        if (!$project) return null;
+        $oldProject = $this->repo->find($id);
+        if (!$oldProject) return null;
+        $newProject =  $this->repo->update($oldProject, $data);
         $this->repoLog->create([
-            'title'       => 'Cập nhật dự án',
-            'project_id'  => $project->id,
+            'title'       => 'Cập nhật thông tin dự án',
+            'project_id'  => $newProject->id,
             'type'        => 'project',
             'action'      => 'update',
-            'old_value'   => $project,
-            'new_value'   => $data,
+            'old_value'   => $oldProject,
+            'new_value'   => $newProject,
             'created_by'  => $data['created_by'] ?? null,
             'created_at'  => now(),
             'updated_at'  => now(),
         ]);
-        return $this->repo->update($project, $data);
+        return $newProject;
     }
 
     public function delete($id)
@@ -135,5 +136,8 @@ class ProjectService
         return $this->repo->delete($project);
     }
 
-    public function deleteSoft($id) {}
+    public function deleteSoft($id)
+    {
+        $project = $this->repo->find($id);
+    }
 }
