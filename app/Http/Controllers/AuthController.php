@@ -71,4 +71,7 @@ class AuthController extends Controller
             'role' => Auth::user()->role ?? null
         ]);
     }
+
+
+    
 }
