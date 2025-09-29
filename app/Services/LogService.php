@@ -3,7 +3,6 @@
 namespace App\Services;
 
 use App\Repositories\LogRepository;
-use Illuminate\Support\Facades\Hash;
 
 class LogService
 {

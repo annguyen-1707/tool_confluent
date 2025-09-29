@@ -3,6 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 
-Route::middleware('jwt.auth')->prefix('users')->group(function () {
-    Route::apiResource('/', UserController::class);
+Route::middleware('jwt.auth')->group(function () {
+    Route::apiResource('users', UserController::class);
 });
