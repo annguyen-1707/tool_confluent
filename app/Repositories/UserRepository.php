@@ -31,4 +31,17 @@ class UserRepository
     {
         return $user->delete();
     }
+
+    public function search(?string $keyword = null, array $columns, int $perPage)
+    {
+        return User::query()
+            ->where('status', 'public')
+            ->where(function ($query) use ($keyword, $columns) {
+                foreach ($columns as $column) {
+                    $query->orWhere($column, 'LIKE', "%{$keyword}%");
+                }
+            })
+            ->paginate($perPage);
+    }
+   
 }
