@@ -26,7 +26,8 @@ class NoteController extends Controller
     public function show($id)
     {
         $note = $this->service->getById($id);
-        if (!$note) return response()->json(['error' => 'Not found'], 404);
+        if (!$note)
+            return response()->json(['error' => 'Not found note'], 404);
         return response()->json($note);
     }
 
@@ -47,14 +48,16 @@ class NoteController extends Controller
     public function update(Request $request, $id)
     {
         $note = $this->service->update($id, $request->all());
-        if (!$note) return response()->json(['error' => 'Not found'], 404);
+        if (!$note)
+            return response()->json(['error' => 'Not found note'], 404);
         return response()->json($note);
     }
 
     public function destroy($id)
     {
         $deleted = $this->service->delete($id);
-        if (!$deleted) return response()->json(['error' => 'Not found'], 404);
+        if (!$deleted)
+            return response()->json(['error' => 'Not found note'], 404);
         return response()->json(['message' => 'Deleted']);
     }
 }

@@ -26,7 +26,7 @@ class ProjectController extends Controller
     public function show($id)
     {
         $project = $this->service->getById($id);
-        if (!$project) return response()->json(['error' => 'Not found'], 404);
+        if (!$project) return response()->json(['error' => 'Not found project'], 404);
         return response()->json($project);
     }
 
@@ -47,21 +47,22 @@ class ProjectController extends Controller
     public function update(Request $request, $id)
     {
         $project = $this->service->update($id, $request->all());
-        if (!$project) return response()->json(['error' => 'Not found'], 404);
+        if (!$project) return response()->json(['error' => 'Not found project'], 404);
         return response()->json($project);
     }
 
     public function destroy($id)
     {
         $deleted = $this->service->delete($id);
-        if (!$deleted) return response()->json(['error' => 'Not found'], 404);
+        if (!$deleted) return response()->json(['error' => 'Not found project'], 404);
         return response()->json(['message' => 'Deleted']);
     }
 
     public function addMembersInProject(Request $request, $projectId)
     {
+        Log::alert("request", $request->all());
         try {
-            $userIds = $this->service->addMembersInProject($request->all(), $projectId);
+            $userIds = $this->service->addMembersInProject($request->input('userIds'), $projectId);
             return response()->json($userIds);
         } catch (\Exception $e) {
             Log::error('Add members failed', [
@@ -71,17 +72,37 @@ class ProjectController extends Controller
             return response()->json(['error' => 'Internal Server Error'], 500);
         }
     }
-    public function removeMemberInProject($userId, $projectId)
+    public function removeMemberInProject($projectId, $userId)
     {
         try {
-            $userId = $this->service->removeMemberInProject($userId, $projectId);
+            $userId = $this->service->removeMemberInProject($projectId, $userId);
             return response()->json($userId);
         } catch (\Exception $e) {
-            Log::error('Add members failed', [
+            Log::error('Remove members failed', [
                 'projectId' => $projectId,
                 'error' => $e->getMessage()
             ]);
             return response()->json(['error' => 'Internal Server Error'], 500);
         }
+    }
+
+    public function search(Request $request)
+    {
+        $keyword = $request->input('keyword');              // từ khóa tìm kiếm
+        $perPage = $request->input('per_page', 10);  // mặc định 10 item/trang
+        Log::info("Keyword: " . $keyword);
+
+        $result = $this->service->search($keyword, $perPage);
+
+        // format JSON gọn gàng
+        return response()->json([
+            'data' => $result->items(),
+            'meta' => [
+                'current_page' => $result->currentPage(),
+                'per_page'     => $result->perPage(),
+                'total'        => $result->total(),
+                'last_page'    => $result->lastPage(),
+            ]
+        ]);
     }
 }
