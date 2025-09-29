@@ -64,7 +64,7 @@ class AuthController extends Controller
         ]);
 
         return response()->json([
-            'access_token' => $token,
+            'authToken' => $token,
             'expires_in'   => Auth::factory()->getTTL() * 60,
             'userId' => Auth::id(),
             'username' => Auth::user()->username ?? null,

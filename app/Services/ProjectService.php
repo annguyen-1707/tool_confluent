@@ -140,4 +140,9 @@ class ProjectService
     {
         $project = $this->repo->find($id);
     }
+
+    public function search(?string $keyword, int $perPage)
+    {
+        return $this->repo->search($keyword, ['title', 'description'], $perPage);
+    }
 }
