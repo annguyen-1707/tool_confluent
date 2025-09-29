@@ -18,7 +18,8 @@ class User extends Model implements Authenticatable, JWTSubject
         'name',
         'username',
         'password',
-        'role'
+        'role',
+        'status',
     ];
 
     // Ẩn password khi return JSON
