@@ -85,4 +85,24 @@ class ProjectController extends Controller
             return response()->json(['error' => 'Internal Server Error'], 500);
         }
     }
+
+    public function search(Request $request)
+    {
+        $keyword = $request->input('keyword');              // từ khóa tìm kiếm
+        $perPage = $request->input('per_page', 10);  // mặc định 10 item/trang
+        Log::info("Keyword: " . $keyword);
+
+        $result = $this->service->search($keyword, $perPage);
+
+        // format JSON gọn gàng
+        return response()->json([
+            'data' => $result->items(),
+            'meta' => [
+                'current_page' => $result->currentPage(),
+                'per_page'     => $result->perPage(),
+                'total'        => $result->total(),
+                'last_page'    => $result->lastPage(),
+            ]
+        ]);
+    }
 }

@@ -53,9 +53,20 @@ class NoteService
 
     public function update($id, array $data)
     {
-        $note = $this->repo->find($id);
-        if (!$note) return null;
-        return $this->repo->update($note, $data);
+        $oldNote = $this->repo->find($id);
+        if (!$oldNote) return null;
+        $newNote =  $this->repo->update($oldNote, $data);
+        $this->repoLog->create([
+            'title' => 'Cập nhật ghi chú thành công',
+            'project_id' => $newNote->project_id,
+            'type' => 'Note',
+            'action' => 'Update',
+            'old_value' => $oldNote,
+            'new_value' => $newNote,
+            'created_by' => Auth::id(),
+            'target_id' => $newNote->id,
+        ]);
+        return $newNote;
     }
 
     public function delete($id)

@@ -36,4 +36,15 @@ class ProjectRepository
     {
         return $project->delete();
     }
+
+    public function search(?string $keyword = null, array $columns, int $perPage)
+    {
+        return Project::query()
+            ->where(function ($query) use ($keyword, $columns) {
+                foreach ($columns as $column) {
+                    $query->orWhere($column, 'LIKE', "%{$keyword}%");
+                }
+            })
+            ->paginate($perPage);
+    }
 }
