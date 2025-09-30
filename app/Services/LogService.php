@@ -13,14 +13,24 @@ class LogService
         $this->repo = $repo;
     }
 
-    public function getAll()
+    public function getAll($perPage = 10, $userId = null, $projectId = null, $type = null)
     {
-        return $this->repo->all();
+        return $this->repo->getAll($perPage, $userId, $projectId, $type);
     }
 
     public function getById($id)
     {
         return $this->repo->find($id);
+    }
+
+    public function getByUserId($userId, $perPage = 10)
+    {
+        return $this->repo->getByUserId($userId, $perPage);
+    }
+
+    public function getByProjectId($projectId, $perPage = 10)
+    {
+        return $this->repo->getByProjectId($projectId, $perPage);
     }
 
     public function create(array $data)
