@@ -91,4 +91,9 @@ class NodeService
         ]);
         return true;
     }
+
+    public function findByFields(array $conditions)
+    {
+        return $this->repo->findByFields($conditions);
+    }
 }

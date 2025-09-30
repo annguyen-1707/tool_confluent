@@ -14,6 +14,7 @@ class Document extends Model
         'title',
         'file_url',
         'allowed_users',
+        'members',
         'project_id',
         'description',
         'status',
