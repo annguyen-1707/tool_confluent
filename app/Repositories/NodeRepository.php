@@ -3,6 +3,7 @@
 namespace App\Repositories;
 
 use App\Models\Node;
+use MongoDB\Laravel\Eloquent\Casts\ObjectId;
 
 class NodeRepository
 {
@@ -30,5 +31,17 @@ class NodeRepository
     public function delete(Node $node)
     {
         return $node->delete();
+    }
+
+    public function findByFields(array $conditions)
+    {
+        $query = Node::query();
+
+        foreach ($conditions as $field => $value) {
+            $query->where($field, $value);
+        }
+
+        $query->where('status', 'public');
+        return $query->get();
     }
 }

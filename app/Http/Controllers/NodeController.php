@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Services\NodeService;
 use Illuminate\Routing\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class NodeController extends Controller
 {
@@ -53,5 +54,19 @@ class NodeController extends Controller
         $deleted = $this->service->delete($id);
         if (!$deleted) return response()->json(['error' => 'Not found node'], 404);
         return response()->json(['message' => 'Deleted']);
+    }
+
+    public function search(Request $request)
+    {
+        $conditions = $request->only([
+            'project_id',
+            'status'
+        ]);             // từ khóa tìm kiếm
+        $result = $this->service->findByFields($conditions);
+
+        return response()->json([
+            'success' => true,
+            'data'    => $result
+        ]);
     }
 }
