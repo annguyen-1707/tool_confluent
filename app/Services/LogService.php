@@ -42,4 +42,9 @@ class LogService
 
         return $this->repo->delete($log);
     }
+
+    public function findByFields(array $conditions)
+    {
+        return $this->repo->findByFields($conditions);
+    }
 }

@@ -11,15 +11,14 @@ class Log extends Model
 
     // Các trường có thể gán hàng loạt
     protected $fillable = [
-        'title',
         'project_id',
+        'node_id',
         'type',
         'action',
         'old_value',
         'new_value',
         'created_by',
-        'created_at',
-        'updated_at'
+        'disable'
     ];
 
     // Nếu bạn muốn dùng timestamps mặc định (created_at, updated_at)

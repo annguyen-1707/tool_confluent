@@ -41,7 +41,7 @@ class NodeRepository
             $query->where($field, $value);
         }
 
-        $query->where('status', 'public');
+        $query->where('disable', false);
         return $query->get();
     }
 }

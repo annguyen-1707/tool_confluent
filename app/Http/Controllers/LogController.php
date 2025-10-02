@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Services\NodeService;
+use App\Services\LogService;
 use Illuminate\Routing\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 
 use function Laravel\Prompts\search;
 
-class NodeController extends Controller
+class LogController extends Controller
 {
     protected $service;
 
-    public function __construct(NodeService $service)
+    public function __construct(LogService $service)
     {
         $this->service = $service;
     }
@@ -25,9 +25,9 @@ class NodeController extends Controller
 
     public function show($id)
     {
-        $node = $this->service->getById($id);
-        if (!$node) return response()->json(['error' => 'Not found node'], 404);
-        return response()->json($node);
+        $Log = $this->service->getById($id);
+        if (!$Log) return response()->json(['error' => 'Not found Log'], 404);
+        return response()->json($Log);
     }
 
     public function store(Request $request)
@@ -40,21 +40,21 @@ class NodeController extends Controller
         //     'status'      => ['required', new Enum(Status::class)],
         //     'created_by'  => 'required|string',
         // ]);
-        $node = $this->service->create($request->all());
-        return response()->json($node, 201);
+        $Log = $this->service->create($request->all());
+        return response()->json($Log, 201);
     }
 
     public function update(Request $request, $id)
     {
-        $node = $this->service->update($id, $request->all());
-        if (!$node) return response()->json(['error' => 'Not found node'], 404);
-        return response()->json($node);
+        $Log = $this->service->update($id, $request->all());
+        if (!$Log) return response()->json(['error' => 'Not found Log'], 404);
+        return response()->json($Log);
     }
 
     public function destroy($id)
     {
         $deleted = $this->service->delete($id);
-        if (!$deleted) return response()->json(['error' => 'Not found node'], 404);
+        if (!$deleted) return response()->json(['error' => 'Not found Log'], 404);
         return response()->json(['message' => 'Deleted']);
     }
 
@@ -62,6 +62,7 @@ class NodeController extends Controller
     {
         $conditions = $request->only([
             'project_id',
+            'node_id',
             '_id',
             'disable'
         ]);             // từ khóa tìm kiếm

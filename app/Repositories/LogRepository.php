@@ -31,4 +31,16 @@ class LogRepository
     {
         return $log->delete();
     }
+
+    public function findByFields(array $conditions)
+    {
+        $query = Log::query();
+
+        foreach ($conditions as $fields => $value) {
+            if (!is_null($value)) {
+                $query->where($fields, $value);
+            }
+        }
+        return $query->get();
+    }
 }
