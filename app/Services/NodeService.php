@@ -37,12 +37,11 @@ class NodeService
         $this->repoLog->create([
             'title' => 'Tạo mốc thời gian thành công',
             'project_id' => $node->project_id,
-            'type' => 'Node',
             'action' => 'Create',
             'old_value' => null,
             'new_value' => $data,
             'created_by' => Auth::id(),
-            'target_id' => $node->id,
+            'updated_by' => Auth::id(),
         ]);
         return $node;
     }

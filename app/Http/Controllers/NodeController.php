@@ -7,6 +7,8 @@ use Illuminate\Routing\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 
+use function Laravel\Prompts\search;
+
 class NodeController extends Controller
 {
     protected $service;
@@ -60,6 +62,7 @@ class NodeController extends Controller
     {
         $conditions = $request->only([
             'project_id',
+            '_id',
             'status'
         ]);             // từ khóa tìm kiếm
         $result = $this->service->findByFields($conditions);
@@ -69,4 +72,6 @@ class NodeController extends Controller
             'data'    => $result
         ]);
     }
+
+   
 }

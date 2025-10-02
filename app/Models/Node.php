@@ -17,7 +17,6 @@ class Node extends Model
         'created_by',
         'created_at',
         'updated_at',
-        'avatar',
         'status'
     ];
 
