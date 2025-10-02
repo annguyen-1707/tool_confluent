@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Enums\Role;
 use App\Enums\Status;
+use App\Enums\Disable;
 use App\Repositories\LogRepository;
 use App\Repositories\NodeRepository;
 use Illuminate\Support\Facades\Auth;
@@ -31,15 +32,23 @@ class NodeService
 
     public function create(array $data)
     {
+        $data['title'] = $data['title'] ?? null;
+        $data['project_id'] = $data['project_id'];
+        $data['description'] = $data['description'] ?? null;
         $data['created_by'] = Auth::id();
-        $data['status'] = Status::Public->value;
+        $data['status'] = Status::Pending->value;
+        $data['disable'] = Disable::Processing->toBool();
         $node = $this->repo->create($data);
+
         $this->repoLog->create([
-            'title' => 'Tạo mốc thời gian thành công',
+            'title'       => $data['title'] ?? null,
+            'description' => $data['description'] ?? null,
             'project_id' => $node->project_id,
-            'action' => 'Create',
-            'old_value' => null,
-            'new_value' => $data,
+            'node_id'    => $node->_id,
+            'action'     => 'Create',
+            'type'       => 'node',
+            'old_value'  => null,
+            'new_value'  => $data,
             'created_by' => Auth::id(),
             'updated_by' => Auth::id(),
         ]);

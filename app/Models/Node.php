@@ -17,7 +17,8 @@ class Node extends Model
         'created_by',
         'created_at',
         'updated_at',
-        'status'
+        'status',
+        'disable'
     ];
 
     // Nếu bạn muốn dùng timestamps mặc định (created_at, updated_at)

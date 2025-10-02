@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Enums\Status;
+use App\Enums\Disable;
 use App\Repositories\LogRepository;
 use App\Repositories\ProjectRepository;
 use App\Repositories\UserRepository;
@@ -35,13 +36,18 @@ class ProjectService
 
     public function create(array $data)
     {
+        $data['title'] = $data['title'] ?? null;
+        $data['project_id'] = $data['project_id'] ?? null;
+        $data['description'] = $data['description'] ?? null;
         $data['created_by'] = Auth::id();
-        $data['status'] = Status::Public->value;
-        $data['members'] = [];
+        $data['status'] = Status::Pending->value;
+        $data['disable'] = Disable::Processing->toBool();
+        $data['members'] = $data['members'] ?? [];
         $project =  $this->repo->create($data);
         // Ghi log
         $this->repoLog->create([
-            'title'       => 'Tạo dự án mới',
+            'title'       => $data['title'] ?? null,
+            'description' => $data['description'] ?? null,
             'project_id'  => $project->id,
             'type'        => 'project',
             'action'      => 'create',
@@ -141,7 +147,12 @@ class ProjectService
         $project = $this->repo->find($id);
         if (!$project) return false;
 
-        $project->status = Status::Deleted->value;
+
+        if ($project->status === Status::Public->value || $project->status === Status::Pending->value) {
+            $project->disable = $project->disable
+                ? Disable::Finished->value
+                : Disable::Deleted->value;
+        }
         $project->save();
         return $project;
     }

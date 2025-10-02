@@ -18,7 +18,7 @@ class Log extends Model
         'old_value',
         'new_value',
         'created_by',
-        'disable'
+
     ];
 
     // Nếu bạn muốn dùng timestamps mặc định (created_at, updated_at)

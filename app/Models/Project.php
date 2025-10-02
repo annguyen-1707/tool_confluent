@@ -19,7 +19,8 @@ class Project extends Model
         'status',
         'created_by',
         'created_at',
-        'updated_at'
+        'updated_at',
+        'disable'
     ];
 
     // Nếu bạn muốn dùng timestamps mặc định (created_at, updated_at)
