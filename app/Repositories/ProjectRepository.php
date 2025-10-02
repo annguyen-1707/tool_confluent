@@ -3,17 +3,21 @@
 namespace App\Repositories;
 
 use App\Models\Project;
+use App\Models\User;
+use Illuminate\Support\Facades\Log;
 
 class ProjectRepository
 {
     public function all()
     {
-        return Project::all();
+        return Project::where('status', 'public')->get();
     }
 
     public function find($id)
     {
-        return Project::find($id);
+        return Project::where('id', $id)
+            ->where('status', 'public')
+            ->first();
     }
 
     public function create(array $data)
@@ -40,10 +44,51 @@ class ProjectRepository
     public function search(?string $keyword = null, array $columns, int $perPage)
     {
         return Project::query()
+            ->where('status', 'public')
             ->where(function ($query) use ($keyword, $columns) {
                 foreach ($columns as $column) {
                     $query->orWhere($column, 'LIKE', "%{$keyword}%");
                 }
+            })
+            ->paginate($perPage);
+    }
+    public function findByFields(array $conditions)
+    {
+        $query = Project::query();
+
+        foreach ($conditions as $field => $value) {
+            $query->where($field, $value);
+        }
+        $query->where('status', 'public');
+
+        return $query->first();
+    }
+    public function searchPeopleNotInProject(?string $keyword, array $columns, int $perPage, string $projectId)
+    {
+        // Lấy project
+        $project = Project::find($projectId);
+
+        if (!$project) {
+            Log::warning("Project not found", ['projectId' => $projectId]);
+
+            // Trả về empty paginator để tránh lỗi null
+            return User::query()->whereRaw('1=0')->paginate($perPage);
+        }
+
+        // Lấy danh sách user_id trong members (nếu null thì thay bằng mảng rỗng)
+        $memberIds = collect($project->members ?? [])->pluck('user_id')->toArray();
+
+        return User::query()
+            ->where('status', 'public')
+            ->when(!empty($memberIds), function ($query) use ($memberIds) {
+                $query->whereNotIn('id', $memberIds); // loại bỏ user đã có trong project
+            })
+            ->when($keyword, function ($query, $keyword) use ($columns) {
+                $query->where(function ($q) use ($columns, $keyword) {
+                    foreach ($columns as $column) {
+                        $q->orWhere($column, 'LIKE', "%{$keyword}%");
+                    }
+                });
             })
             ->paginate($perPage);
     }

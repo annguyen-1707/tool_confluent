@@ -54,7 +54,7 @@ class ProjectService
         return $project;
     }
 
-    public function addMembersInProject(array $userIds, $projectId)
+    public function addMemberInProject(string $userId, string $projectId)
     {
         $project = $this->repo->find($projectId);
         if (!$project) {
@@ -63,28 +63,27 @@ class ProjectService
 
         $currentMembers = $project->members ?? [];
 
-        foreach ($userIds as $userId) {
-            $user = $this->repoUser->find($userId);
-            Log::alert("UserIds", $userIds);
-            if ($user instanceof \Illuminate\Support\Collection) {
-                $user = $user->first();
-            }
+        // Tìm user
+        $user = $this->repoUser->find($userId);
+        if ($user instanceof \Illuminate\Support\Collection) {
+            $user = $user->first();
+        }
 
-            if ($user) {
-                $exists = collect($currentMembers)->firstWhere('user_id', $userId);
-                if (!$exists) {
-                    $currentMembers[] = [
-                        'user_id'  => $userId,
-                        'name'     => $user->name,
-                        'username' => $user->username,
-                    ];
-                }
-            } else {
-                Log::warning("User not found when adding to project", [
-                    'userId' => $userId,
-                    'projectId' => $projectId
-                ]);
+        if ($user) {
+            // Kiểm tra user đã tồn tại trong members chưa
+            $exists = collect($currentMembers)->firstWhere('user_id', $userId);
+            if (!$exists) {
+                $currentMembers[] = [
+                    'user_id'  => $userId,
+                    'name'     => $user->name,
+                    'username' => $user->username,
+                ];
             }
+        } else {
+            Log::warning("User not found when adding to project", [
+                'userId'    => $userId,
+                'projectId' => $projectId
+            ]);
         }
 
         $project->members = $currentMembers;
@@ -92,6 +91,7 @@ class ProjectService
 
         return $currentMembers;
     }
+
 
     public function removeMemberInProject($projectId, $userId)
     {
@@ -139,10 +139,20 @@ class ProjectService
     public function deleteSoft($id)
     {
         $project = $this->repo->find($id);
+        if (!$project) return false;
+
+        $project->status = Status::Deleted->value;
+        $project->save();
+        return $project;
     }
 
     public function search(?string $keyword, int $perPage)
     {
         return $this->repo->search($keyword, ['title', 'description'], $perPage);
+    }
+
+    public function searchPeopleNotInProject(?string $keyword, int $perPage, string $projectId)
+    {
+        return $this->repo->searchPeopleNotInProject($keyword, ['name', 'username'], $perPage, $projectId);
     }
 }
