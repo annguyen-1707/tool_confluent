@@ -10,13 +10,13 @@ class ProjectRepository
 {
     public function all()
     {
-        return Project::where('status', 'public')->get();
+        return Project::where('disable', false)->get();
     }
 
     public function find($id)
     {
         return Project::where('id', $id)
-            ->where('status', 'public')
+            ->where('disable', false)
             ->first();
     }
 
@@ -44,7 +44,7 @@ class ProjectRepository
     public function search(?string $keyword = null, array $columns, int $perPage)
     {
         return Project::query()
-            ->where('status', 'public')
+            ->where('disable', 'false')
             ->where(function ($query) use ($keyword, $columns) {
                 foreach ($columns as $column) {
                     $query->orWhere($column, 'LIKE', "%{$keyword}%");
@@ -59,7 +59,7 @@ class ProjectRepository
         foreach ($conditions as $field => $value) {
             $query->where($field, $value);
         }
-        $query->where('status', 'public');
+        $query->where('disable', 'false');
 
         return $query->first();
     }
@@ -79,7 +79,7 @@ class ProjectRepository
         $memberIds = collect($project->members ?? [])->pluck('user_id')->toArray();
 
         return User::query()
-            ->where('status', 'public')
+            ->where('disable', 'false')
             ->when(!empty($memberIds), function ($query) use ($memberIds) {
                 $query->whereNotIn('id', $memberIds); // loại bỏ user đã có trong project
             })

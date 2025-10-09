@@ -61,7 +61,7 @@ class LogController extends Controller
     public function search(Request $request)
     {
         $conditions = $request->only([
-            'project_id',
+            'project_id', 
             'node_id',
             '_id',
             'disable'
